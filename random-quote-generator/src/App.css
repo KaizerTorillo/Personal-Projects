@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#quote-box {
+  background-color: white;
+  border-radius: 3px;
+  padding: 30px;
+  justify-content: space-between;
+  width: 450px;
+  height: auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  margin-right: 0.4em;
+  font-weight: 500;
+}
+
+#author {
+  text-align: right;
+  font-size: 0.7em;
+}
+
+#tweet-quote {
+  text-decoration: none;
+  display: flex;
+  width: fit-content;
+  border-radius: 8px;
+  color: white;
+}
+
+#new-quote {
+  float: right;
+  padding: 0.5rem;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+
+.button {
+border-radius: 8px;
+padding: 0.2em 0.4em;
+width: fit-content;
+}
