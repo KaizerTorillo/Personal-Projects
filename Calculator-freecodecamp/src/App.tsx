@@ -33,7 +33,7 @@ function App() {
     } else if (symbol === ".") {
       if (answer.indexOf(".") === -1) {
         // split by operators and get the last number
-        cont lastNumber = expression.split(/[-+/*]/g).pop();
+        const lastNumber = expression.split(/[-+/*]/g).pop();
         // if the last number already has a decimal, dont add another
         if (lastNumber?.includes(".")) return;
         setExpression(expression + symbol);
@@ -106,7 +106,7 @@ function App() {
           <button id="add" onClick={() => buttonPress("+")} className="blue">+</button>
           <button id="zero" onClick={() => buttonPress("zero")} className="light-gray">0</button>
           <button id="decimal" onClick={() => buttonPress(".")} className="light-gray">.</button>
-          <button id="equal" onClick={() => buttonPress("=")} className="blue">=</button>
+          <button id="equals" onClick={() => buttonPress("=")} className="blue">=</button>
         </div>
       </div>
     </div>

@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+
 .App {
   text-align: center;
 }
@@ -32,6 +41,8 @@
 #author {
   text-align: right;
   font-size: 0.7em;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #tweet-quote {
@@ -40,6 +51,8 @@
   width: fit-content;
   border-radius: 8px;
   color: white;
+  text-align: center;
+    
 }
 
 #new-quote {
@@ -51,9 +64,8 @@
   cursor: pointer;
   display: flex;
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
-
 
 .button {
 border-radius: 8px;

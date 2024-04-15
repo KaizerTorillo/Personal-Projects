@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState} from 'react';
 import quotes from "./quotes.json";
 import palette from "./colors.js"
-import {FaTwitter, FaTumblr} from "react-icons/fa" 
+import {FaTwitter, FaQuoteLeft, FaQuoteRight} from "react-icons/fa" 
 
 function App() {
 
@@ -26,7 +26,9 @@ function App() {
         <div id="quote-box">
           <div id="text" style={{color: oneColour}}>
             <p>
-           "{quote}"
+              <FaQuoteLeft size="15"/>
+              {quote}
+              <FaQuoteRight size="15"/>
             </p>
           </div>
           <div id="author" style={{color: oneColour}}>
