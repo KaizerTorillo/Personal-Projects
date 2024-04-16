@@ -5,11 +5,13 @@ import {Authenticator} from '@aws-amplify/ui-react';
 import awsExports from './aws-exports';
 
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import '@aws-amplify/ui-react/styles.css';
 
+import SiteHeader from "./components/common/SiteHeader";
 import SiteFooter from './components/common/SiteFooter';
 import SiteNav from './components/common/SiteNav';
+
 
 import HomePage from './components/home/HomePage';
 import LoginPage from "./components/auth/LoginPage";
@@ -28,6 +30,7 @@ function App() {
     {({ signOut, user}) => (
       <div>
         <header >
+          <SiteHeader />
           <SiteNav logOut={signOut}/>
           <Routes>
             <Route path="*" element={<HomePage />} />
