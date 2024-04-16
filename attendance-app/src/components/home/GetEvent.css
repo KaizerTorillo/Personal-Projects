@@ -1,0 +1,32 @@
+.event-buttons {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+  
+}
+
+.event-button {
+    margin: 10px;
+    width: 300px;
+    height: 50px;
+   
+ 
+   
+  
+   
+   
+    border-radius: 5px;
+    /* Add border radius */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+.event-button:hover {
+    background-color: #0056b3;
+    /* Darker background color on hover */
+}
+
+.title {
+    text-align: center;
+}
