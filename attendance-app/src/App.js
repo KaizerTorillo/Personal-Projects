@@ -9,7 +9,6 @@ import './App.css';
 import '@aws-amplify/ui-react/styles.css';
 
 import SiteHeader from "./components/common/SiteHeader";
-import SiteFooter from './components/common/SiteFooter';
 import SiteNav from './components/common/SiteNav';
 
 
@@ -38,12 +37,11 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/attendance" element={<ConfirmAttendance />} />
-            <Route path="/thankyou" element={<ThankYou />} />
+            <Route path="/accept" element={<ThankYou />} />
             <Route path="/decline" element={<Decline />} />
             <Route path="/create-event" element={<CreateEvent />} />
             <Route path="/events" element={<GetEvent />} />
           </Routes>
-          <SiteFooter />
         </header>
       </div>
     )}

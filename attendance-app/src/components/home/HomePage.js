@@ -8,7 +8,7 @@ function HomePage() {
         <Container>
             <Row className="px-4 my-5">
                 <Col xs={4} sm={6}>
-                    <Image src="/img/nologo.png" fluid />
+                    <Image src="/img/attendancelogo.png" fluid />
                 </Col>
             </Row>
         </Container>

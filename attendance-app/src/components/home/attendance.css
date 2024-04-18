@@ -1,0 +1,39 @@
+.confirmation {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+.message-box {
+    width: 80vh;
+    background-color: white;
+    border-bottom: 2px solid darkgray;
+}
+
+.message {
+    margin: 300px 0 100px 25px;
+    font-family: Helvetica,  sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    padding-bottom: 0;
+}
+
+
+.confirmation-button {
+
+    margin: 20px 20px 0 0;
+    width: 300px;
+    height: 50px; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirmation-button:hover {
+    color: white;
+    background: #146eb4;
+}
+
