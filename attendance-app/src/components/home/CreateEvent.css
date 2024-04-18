@@ -2,7 +2,6 @@ form {
     margin: 30px auto;
     padding: 20px;
     width: 300px;
-    background-color: #f4f4f4;
     border-radius: 5px;
 }
 
@@ -20,22 +19,20 @@ select {
     width: 70%;
     padding: 8px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    
     border-radius: 5px;
 }
 
 input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #252f3e;
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 p {
     margin-top: 15px;
-    color: green;
+    
 }

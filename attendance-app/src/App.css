@@ -1,0 +1,30 @@
+.parent {
+    height: 100vh;
+    /* Ensure the parent container fills the viewport height */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Ensure flex items stack vertically */
+}
+
+.top {
+    height: 10%;
+    background-color: #252f3e;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    flex: 1;
+    /* Make the content flex item grow to fill remaining vertical space */
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    min-width: fit-content;
+    position: fixed;
+    left: 30%;
+    top: 10%;
+}

@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 
 import {Amplify} from 'aws-amplify';
 import {Authenticator} from '@aws-amplify/ui-react';
@@ -25,27 +25,34 @@ Amplify.configure(awsExports);
 
 function App() {
   return (
-    <Authenticator loginMechanism={["email"]}>
+     <Authenticator loginMechanism={["email"]}>
     {({ signOut, user}) => (
-      <div>
-        <header >
-          <SiteHeader />
-          <SiteNav logOut={signOut}/>
-          <Routes>
-            <Route path="*" element={<HomePage />} />
-            <Route path="/" exact={true} element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/attendance" element={<ConfirmAttendance />} />
-            <Route path="/accept" element={<ThankYou />} />
-            <Route path="/decline" element={<Decline />} />
-            <Route path="/create-event" element={<CreateEvent />} />
-            <Route path="/events" element={<GetEvent />} />
-          </Routes>
-        </header>
-      </div>
+          <div className="parent">
+            <div className="top" >
+              <SiteHeader />
+            </div>
+            <div className="wrapper">
+              <div className="side">
+                <SiteNav logOut={signOut}/>
+              </div>
+            </div>
+            <div className="content">
+                <Routes>
+                  <Route path="*" element={<HomePage />} />
+                  <Route path="/" exact={true} element={<HomePage />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/register" element={<RegisterPage />} />
+                  <Route path="/attendance" element={<ConfirmAttendance />} />
+                  <Route path="/accept" element={<ThankYou />} />
+                  <Route path="/decline" element={<Decline />} />
+                  <Route path="/create-event" element={<CreateEvent />} />
+                  <Route path="/events" element={<GetEvent />} />
+                </Routes>
+            </div>
+          </div>
     )}
     </Authenticator>
+
   );
 }
 

@@ -1,25 +1,30 @@
 import { useState } from 'react';
 import './CreateEvent.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function CreateEvent() {
   const current = new Date();
   const current_date = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${String(current.getDate()).padStart(2, '0')}`;
   const [title, setTitle] = useState("");
   const [date, setDate] = useState(current_date);
-  const [time, setTime] = useState("11:30");
+  const [time, setTime] = useState("11:00");
   const [location, setLocation] = useState("Online");
   const [formdisabled, setFormdisabled] = useState(false);
   const [eventCreated, setEventCreated] = useState(false);
-
+  
   const handleCreate = (event) => {
     event.preventDefault();
-    const new_invitation = { "event_id": date + time, "Date": date, "Time": time, "Title": title, Location: location };
+    const event_id = uuidv4();
+    const new_invitation = {"event_id": event_id, "Date": date, "Time": time, "Title": title, "Location": location };
     
-    const URL = 'https://iangke6k55.execute-api.us-east-1.amazonaws.com/dev/create_event_api';
+    const URL = 'https://28par060n5.execute-api.us-east-1.amazonaws.com/dev/create_event';
+    
+    /* 'https://iangke6k55.execute-api.us-east-1.amazonaws.com/dev/create_event_api'; */
 
     fetch(URL, {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
+      method: "POST",
+      headers: { "Content-Type": "application/json"
+                 },
       body: JSON.stringify(new_invitation)
     }).then(() => {
       console.log('Event successfully created!');
@@ -47,7 +52,7 @@ function CreateEvent() {
         <input type="submit" value="Save Event" disabled={formdisabled} />
       </form>
 
-      {eventCreated && <p>Event created successfully!</p>}
+      {eventCreated && <p>Event creation success!!!</p>}
     </div>
   );
 }
