@@ -16,31 +16,28 @@
 }
 
 .nav-button {
-  font-size: 20px;
+  font-size: 1vw;
   border: none;
-  border-radius: 30px;
-  width: 90%;
-  display: inline-block;
+  border-radius: 20px;
+  width: auto;
+  display: flex;
   margin-top: 20px;
-  margin-right: 30px;
-  padding-left: 10px;
   background-color: #252F3E;
   color: white;
   text-align: left;
-  position: relative;
+  flex-direction: column;
+
 }
 
 .nav-button:hover {
     color: white;
     background: #146eb4;
+    width: 100%;
 }
 
-.selected {
-    color: white;
-    background: #146eb4;
-}
 
 .nav a {
-  padding-left: 20px;
+  padding-left: 10px;
+  text-decoration: none;
 }
 

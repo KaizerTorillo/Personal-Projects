@@ -12,6 +12,7 @@ function CreateEvent() {
   const [formdisabled, setFormdisabled] = useState(false);
   const [eventCreated, setEventCreated] = useState(false);
   
+  
   const handleCreate = (event) => {
     event.preventDefault();
     const event_id = uuidv4();
@@ -37,7 +38,7 @@ function CreateEvent() {
 
   return (
     <div>
-      <form onSubmit={handleCreate}>
+      {!eventCreated ? (<form onSubmit={handleCreate}>
         <label >Date</label>
         <input type="date" name={date} value={date} onChange={(e) => setDate(e.target.value)} /><br />
         <label>Time</label>
@@ -51,8 +52,7 @@ function CreateEvent() {
         </select><br />
         <input type="submit" value="Save Event" disabled={formdisabled} />
       </form>
-
-      {eventCreated && <p>Event creation success!!!</p>}
+      ) : ( <p>Event creation success!!!</p>)}
     </div>
   );
 }
