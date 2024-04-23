@@ -46,7 +46,7 @@ function GetEvent() {
             <div><h1>List of Events</h1></div>
             
             <div className="event-buttons">
-                {events.length > 0 && events.map(e => (
+                {events.map(e => (
                     <button className="event-button" onClick={() => eventClick(e)}>
                         {e.Date} {e.Time} {e.Title}
                     </button>

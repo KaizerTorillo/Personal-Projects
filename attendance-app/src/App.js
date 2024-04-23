@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Route, Routes} from "react-router-dom";
 
 import {Amplify} from 'aws-amplify';
@@ -15,11 +16,11 @@ import SiteNav from './components/common/SiteNav';
 import HomePage from './components/home/HomePage';
 import LoginPage from "./components/auth/LoginPage";
 import RegisterPage from "./components/auth/RegisterPage";
-import ConfirmAttendance from "./components/home/ConfirmAttendance";
 import ThankYou from "./components/home/ThankYou";
 import Decline from "./components/home/Decline";
 import CreateEvent from "./components/home/CreateEvent";
 import GetEvent from "./components/home/GetEvent";
+
 
 Amplify.configure(awsExports);
 
@@ -42,7 +43,6 @@ function App() {
                   <Route path="/" exact={true} element={<HomePage />} />
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/register" element={<RegisterPage />} />
-                  <Route path="/attendance" element={<ConfirmAttendance />} />
                   <Route path="/accept" element={<ThankYou />} />
                   <Route path="/decline" element={<Decline />} />
                   <Route path="/create-event" element={<CreateEvent />} />

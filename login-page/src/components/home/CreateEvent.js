@@ -24,7 +24,7 @@ function CreateEvent() {
 
     fetch(URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" 
+      headers: { "Content-Type": "application/json"
                  },
       body: JSON.stringify(new_invitation)
     }).then(() => {
@@ -48,7 +48,7 @@ function CreateEvent() {
         <label>Location</label>
         <select value={location} onChange={(e) => setLocation(e.target.value)}>
           <option value="Online">Online</option>
-          <option value="On Campus">On Campus</option>
+          <option value="In campus">In Campus</option>
         </select><br />
         <input type="submit" value="Save Event" disabled={formdisabled} />
       </form>

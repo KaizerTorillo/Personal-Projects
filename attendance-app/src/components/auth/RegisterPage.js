@@ -8,7 +8,7 @@ import Button from "react-bootstrap/esm/Button";
 function RegisterPage() {
     return (
         <Container>
-            <Row className="px-4 my-5">
+            <Row className="px-5 my-5">
                 <Col><h1>Register</h1></Col>
             </Row>
             <Row className="px-4 my-5">

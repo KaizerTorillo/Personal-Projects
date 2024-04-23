@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 function LoginPage() {
     return (
         <Container>
-            <Row className="px-4 my-5">
+            <Row className="px-5 my-5">
                 <Col><h1>Login</h1></Col>
             </Row>
             <Row className="px-4 my-5">

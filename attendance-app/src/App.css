@@ -21,10 +21,9 @@
     flex: 1;
     /* Make the content flex item grow to fill remaining vertical space */
     background-color: white;
-    text-align: center;
     padding: 20px;
     min-width: fit-content;
     position: fixed;
-    left: 30%;
+    left: 42vw;
     top: 10%;
 }
